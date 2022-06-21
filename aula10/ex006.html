@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       div#area {/*arrumei toda a tag div que coloquei uma ID*/
+            font: normal 20pt arial;
+            background: rgb(2, 31, 2);
+            color: white;
+            width: 200px; /*largura*/
+            height: 200px;/*altura*/
+            line-height: 200px ;/*a frase fica no meio da tela*/
+            text-align: center;/*texto ao centro*/
+        }
+    </style>
+</head>
+<body>
+
+    <div id="area" onclick="clicar()"><!--quando eu clicar na div-->
+        Interaja...
+    </div>
+    
+    <script>
+        var a = window.document.getElementById('area')/*crio um objeto chamado a - faz a ligação com o a no js com o elemento area que está dentro do html*/
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        
+        function clicar(){
+            a.innerText='clicou' /*ai muda o conteudo do objeto para clicou*/
+            a.style.background ='red'
+
+        }
+
+        function entrar(){
+            a.innerText='entrou' 
+            a.style.background ='green'
+        }
+
+        function sair(){
+            a.innerText='saiu' 
+            a.style.background ='blue'
+            
+        }
+
+    </script>
+</body>
+</html>

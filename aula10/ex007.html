@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando números</title>
+    <style>
+            body{
+                font: normal 18pt arial;
+                background: rgb(95, 92, 90);
+                
+
+            }
+
+            input {
+                font: normal 18 pt arial;
+                width: 100px;
+                
+            }
+
+            div#res{
+                margin-top: 20px;
+                color: rgb(221, 218, 13);
+
+            }
+            strong#resFinal{
+                color: black;
+            }
+
+            strong#result{
+                color: rgb(6, 68, 6);
+
+                
+            }
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Somando valores!</h1>
+    <input type="number" name="txtn1" id="txtn1"> + <!-- campo para incluir numero-->  
+    <input type="number" name="txtn2" id="txtn2"><!-- campo para incluir numero-->  
+    <input type="button" value="somar" onclick="somar()"> <!--botão de somar-->
+    <div id = "res"> <strong id="result">RESULTADO</strong></div>
+
+
+    <script>
+
+        function somar(){/* criei uma função*/
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1+n2
+            res.innerHTML= `A soma entre  <strong id = resFinal>${n1}</strong>  +  <strong id = resFinal> ${n2} </strong> =   <strong id = resFinal>${s}</strong>`/*crase*/
+
+
+        }
+    </script>
+
+
+
+
+</body>
+</html>
