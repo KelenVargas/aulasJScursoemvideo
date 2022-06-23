@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+
+<style>
+    body{
+        background-color: rgb(187, 150, 150);
+    }
+    h1{
+    color: rgb(88, 42, 4);
+    }
+
+    h2{
+        font-size: 20px;
+    }
+    div#resultado{
+        color: rgb(36, 29, 29);
+    }
+    
+    #Est{
+        color: red;
+        font-size: 15pt;
+    }
+
+    #Bra{
+        color: rgb(10, 112, 13);
+        font-size: 15pt;
+
+    }
+
+</style>
+
+<body>
+    <h1>De onde você é ?? </h1>
+    <h2>Qual sua nacionalidade?</h2> <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value = " Clique Aqui" onclick = clicar()>
+    
+    <div id = "resultado">
+        
+    </div>
+
+    <script>
+        function clicar (){
+            var txtnac = window.document.querySelector('input#txtnac').value.toLowerCase();
+            var resultado = window.document.querySelector('div#resultado')
+            var pais = document.querySelector('input#txtnac').value
+            resultado.innerHTML= (`<p>Seu pais é  ${pais}</p>`)
+           
+            if(pais != 'brasil'){
+
+                resultado.innerHTML += (`<p>Você é <strong id="Est">Estrangeiro!!</strong><p/>`)
+            } else{
+                resultado.innerHTML += (`Você é <strong id = "Bra">Brasileiro!!</strong>`)
+            }
+
+        }
+
+    </script>
+</body>
+</html>
